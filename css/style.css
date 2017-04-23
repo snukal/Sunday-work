@@ -206,14 +206,16 @@ section .container {
     min-height: 826px;
     height: 100%;
     margin: 10px auto;
+    display: table;
 }
 
     section .container div.left {
-        float: left;
+        /*float: left;*/
         width: 69.96527777777778%;
         height: 100%;
         background-color: #ccc;
         padding: 10px;
+        display: table-cell;
     }
 
         section .container div.left .inner-left {
@@ -256,7 +258,7 @@ section .container {
                 margin: 15px;
                 margin-top: 0;
                 background-color: #282828;
-                height: 100%;
+                height: auto;
                 width: 92.23918575063613%;
                 color: white;
                 overflow:scroll;
@@ -276,11 +278,13 @@ section .container {
                 }
 
     section .container div.right {
-        float: right;
+        /*float: right;*/
         width: 30.03472222222222%;
         height: 100%;
         background-color: #a3a3a3;
         padding: 10px;
+        display: table-cell;
+        position: relative;
     }
 
         section .container div.right .inner-right {
@@ -288,6 +292,8 @@ section .container {
             height: 100%;
             background-color: #515151;
             padding: 10px;
+            position: relative;
+            top: -25px;            
         }
 
             section .container div.right .inner-right .fancy-ul > li {

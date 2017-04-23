@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
         _td_ = document.createElement('td');
 
     //resize height
-    function resize() {
-        var left = document.querySelector('.left').offsetHeight,
-            right = document.querySelector('.right'),
-            container = document.querySelector('section .container');
+    // function resize() {
+    //     var left = document.querySelector('.left').offsetHeight,
+    //         right = document.querySelector('.right'),
+    //         container = document.querySelector('section .container');
 
-        right.style.height = left + 'px';
-        container.style.minHeight = left + 'px';
-    };
+    //     right.style.height = left + 'px';
+    //     container.style.minHeight = left + 'px';
+    // };
 
     //fancy click
     function Activation(target) {
@@ -136,9 +136,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    addEvent(window, "resize", function (event) {
-        resize();
-    });
+    // addEvent(window, "resize", function (event) {
+    //     resize();
+    // });
 
     //table sorting
     function sort(table, col, rev) {
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.getElementById("table").appendChild(buildTheTable(myArr)); //create table
             sortTable(); // invoke sorting
-            resize();// invoke resize of height
+            // resize();// invoke resize of height
         }
     };
     xmlhttp.open("GET", "http://cn.sbtech.com/sb-test/content.json", true);
