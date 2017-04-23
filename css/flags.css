@@ -1,0 +1,24 @@
+﻿.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    border: 1px solid white;
+}
+.flag-icon:before {
+    content: "\00a0"}
+
+.flag-icon-gb {
+        background-image: url(../images/uk.png);
+    }
+.flag-icon-de {
+        background-image: url(../images/de.png);
+    }
+.flag-icon-fr {
+        background-image: url(../images/fr.png);
+    }

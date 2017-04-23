@@ -1,0 +1,393 @@
+﻿@font-face {
+    font-family: "HelveticaInseratLT";
+    src: url('../fonts/Helvetica Inserat LT.eot') format('embedded-opentype');
+    src: url('../fonts/Helvetica Inserat LT.ttf') format('opentype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, ul, span, h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-shadow: none;
+    background-color: white;
+    background-size: cover;
+    overflow-y: scroll;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.logo {
+    position: fixed;
+    word-wrap: break-word;
+    width: 30px;
+    background-color: #910000;
+    color: white;
+    font-size: 19.33pt;
+    top: 85px;
+    height: 110px;
+    letter-spacing: 0px;
+    line-height: 23px;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.body-wrap {
+    max-width: 1280px;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding: 0;
+}
+
+.navbar-collapse {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+
+#divHeaderWrapper .container {
+    width: 90%;
+    height: 105px;
+    background-color: #ccc;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-nav {
+    margin: 0;
+}
+
+    .navbar-nav .wrapper-nav {
+        display: none;
+    }
+
+    .navbar-nav > li {
+        float: left;
+        position: relative;
+        display: block;
+        width: 7.25em;
+        height: 30px;
+        text-align: center;
+        background-color: #666;
+        margin: 0 2px 0 0;
+    }
+
+        .navbar-nav > li:hover {
+            background-color: black;
+        }
+
+        .navbar-nav > li > a {
+            text-decoration: none;
+            color: white;
+            line-height: 30px;
+            font-family: Tahoma;
+            font-weight: bold;
+        }
+
+.dropdown:hover ul {
+    display: block;
+}
+/*arrows*/
+.arrow-down {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #fff;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #fff;
+}
+
+.active .arrow-right {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #fff;
+}
+
+.submenu {
+    width: 148px;
+    height: 33px;
+    position: relative;
+    display: block;
+    background-color: black;
+    text-align: left;
+    font-size: 12px;
+}
+
+    .submenu div > a {
+        text-decoration: none;
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 5px;
+    }
+
+    .submenu > div {
+        width: 140px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid #808080;
+        display: table;
+    }
+
+    .submenu:last-child div {
+        border-bottom: none;
+    }
+
+.langs-menu {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    height: 30px;
+}
+
+    .langs-menu > li {
+        float: left;
+        position: relative;
+        display: block;
+        padding-left: 5px;
+        height: 65%;
+    }
+
+        .langs-menu > li > a {
+            display: block;
+            height: 100%;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+
+.opaque {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    z-index: 2;
+    top: 0px;
+    left: 5px;
+}
+
+.active .opaque {
+    display: none;
+}
+
+section .container {
+    width: 90%;
+    min-height: 826px;
+    height: 100%;
+    margin: 10px auto;
+}
+
+    section .container div.left {
+        float: left;
+        width: 69.96527777777778%;
+        height: 100%;
+        background-color: #ccc;
+        padding: 10px;
+    }
+
+        section .container div.left .inner-left {
+            width: 100%;
+            height: 100%;
+            background-color: #515151;
+            padding: 10px;
+            color: #fff;
+        }
+
+            section .container div.left .inner-left h2 {
+                color: #fff;
+                font-size: 48px;
+                padding-left: 20px;
+                font-weight: 300;
+                font-family: 'HelveticaInseratLT';
+            }
+
+            section .container div.left .inner-left hr {
+                display: block;
+                height: 2px;
+                border: 0;
+                border-top: 1px solid #000;
+                margin: 0.5em 0;
+                margin-bottom: 15px;
+                padding: 0;
+                background-color: #7a7a7a;
+            }
+
+            section .container div.left .inner-left p {
+                text-indent: 35px;
+                padding: 15px;
+                padding-top: 0;
+                padding-right: 0;
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            section .container div.left .inner-left .table-wrap {
+                margin: 15px;
+                margin-top: 0;
+                background-color: #282828;
+                height: 100%;
+                width: 92.23918575063613%;
+                color: white;
+                overflow:scroll;
+            }
+
+                section .container div.left .inner-left .table-wrap table {
+                    width: 100%;
+                }
+
+                section .container div.left .inner-left .table-wrap thead {
+                    text-align: left;
+                    background: #515151;
+                }
+
+                section .container div.left .inner-left .table-wrap th {
+                    border-bottom: 1px solid aliceblue;
+                }
+
+    section .container div.right {
+        float: right;
+        width: 30.03472222222222%;
+        height: 100%;
+        background-color: #a3a3a3;
+        padding: 10px;
+    }
+
+        section .container div.right .inner-right {
+            width: 100%;
+            height: 100%;
+            background-color: #515151;
+            padding: 10px;
+        }
+
+            section .container div.right .inner-right .fancy-ul > li {
+                color: #fff;
+                position: relative;
+                height: 100%;
+                display: block;
+                background-color: #000;
+                padding: 10px;
+                padding-top: 0;
+                padding-bottom: 0;
+                border-bottom: 1px solid #515151;
+            }
+
+                section .container div.right .inner-right .fancy-ul > li a {
+                    text-decoration: none;
+                    color: white;
+                    line-height: 35px;
+                }
+
+                section .container div.right .inner-right .fancy-ul > li .hidden > li {
+                    display: none;
+                }
+
+                section .container div.right .inner-right .fancy-ul > li.active .hidden > li {
+                    display: block;
+                    padding: 10px 0 10px 0;
+                }
+
+footer {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+    background-color: #ccc;
+    padding: 0 20px;
+    color: #515151;
+    display: table;
+}
+
+    footer div.foot-ul {
+        width: 33%;
+        height: 100%;
+        float: right;
+    }
+
+        footer div.foot-ul ul li.first {
+            float: left;
+            position: relative;
+            display: block;
+            padding-left: 12px;
+        }
+
+        footer div.foot-ul ul li {
+            float: left;
+            position: relative;
+            display: block;
+            padding-left: 15px;
+        }
+
+            footer div.foot-ul ul li a {
+                color: #515151;
+            }
+
+    footer div.copyright {
+        width: 67%;
+        float: left;
+    }
+
+
+
+@media (min-width: 1280px) {
+    footer div.foot-ul {
+        width: 33%;
+        height: 100%;
+        float: right;
+    }
+
+        footer div.foot-ul ul li.first {
+            float: left;
+            position: relative;
+            display: block;
+            padding-left: 12px;
+        }
+
+        footer div.foot-ul ul li {
+            float: left;
+            position: relative;
+            display: block;
+            padding-left: 15px;
+        }
+
+            footer div.foot-ul ul li a {
+                color: #515151;
+            }
+
+    footer div.copyright {
+        width: 67%;
+        float: left;
+    }
+}
