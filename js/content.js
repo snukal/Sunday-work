@@ -48,9 +48,12 @@
      6. Get content with XMLHTTP request from here: http://cn.sbtech.com/sb-test/content.json
 */
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    var _table_ = document.createElement('table'),
+//document.addEventListener("DOMContentLoaded", function () {
+$(function () { //jQery shortest recording else is
+                // $.ready(function(){...});
+                //$.load(function(){...}); is more efficient because 
+                //it waits the subelements to be loaded (all elements)
+    var _table_ = document.createElement('table'),//createElement is the fastest way - 100ms
         _tbody_ = document.createElement('tbody'),
         _thead_ = document.createElement('thead'),
         _tr_ = document.createElement('tr'),
@@ -67,23 +70,28 @@ document.addEventListener("DOMContentLoaded", function () {
     //     container.style.minHeight = left + 'px';
     // };
 
-    //fancy click
+    //fancy click Vnilla is commented
     function Activation(target) {
         var target, el, makeActive;
 
         target = target;
 
-        el = document.querySelectorAll(target);
+        //el = document.querySelectorAll(target);
+        el = $(target);
+        
 
         makeActive = function () {
-            for (var i = 0; i < el.length; i++)
-                el[i].classList.remove('active');
+            //for (var i = 0; i < el.length; i++)
+                //el[i].classList.remove('active');
+                $('.active').removeClass('active');
 
-            this.classList.add('active');
+            //this.classList.add('active');
+            $(this).addClass('active');
         };
 
-        for (var i = 0; i < el.length; i++)
-            el[i].addEventListener('mousedown', makeActive);
+        // for (var i = 0; i < el.length; i++)
+        //     el.addEventListener('mousedown', makeActive);
+        el.mousedown(makeActive);
     }
 
     //table build
@@ -125,16 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //Event listener for width resize
-    function addEvent(object, type, callback) {
-        if (object == null || typeof (object) == 'undefined') return;
-        if (object.addEventListener) {
-            object.addEventListener(type, callback, false);
-        } else if (object.attachEvent) {
-            object.attachEvent("on" + type, callback);
-        } else {
-            object["on" + type] = callback;
-        }
-    };
+    // function addEvent(object, type, callback) {
+    //     if (object == null || typeof (object) == 'undefined') return;
+    //     if (object.addEventListener) {
+    //         object.addEventListener(type, callback, false);
+    //     } else if (object.attachEvent) {
+    //         object.attachEvent("on" + type, callback);
+    //     } else {
+    //         object["on" + type] = callback;
+    //     }
+    // };
 
     // addEvent(window, "resize", function (event) {
     //     resize();
