@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         table.appendChild(tbody);
         for (var i = 0, maxi = arr.length; i < maxi; ++i) {
             var tr = _tr_.cloneNode(false);
-            for (var j = 0, maxj = columns.length; j < maxj ; ++j) {
+            for (var j = 0, maxj = columns.length; j < maxj; ++j) {
                 var td = _td_.cloneNode(false);
                 cellValue = arr[i][columns[j]];
                 td.appendChild(document.createTextNode(arr[i][columns[j]] || ''));
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return rev
                 * (a.cells[col].textContent.trim()
                     .localeCompare(b.cells[col].textContent.trim())
-                   );
+                );
         });
         for (i = 0; i < tr.length; ++i) tb.appendChild(tr[i]);
     }
@@ -172,19 +172,29 @@ document.addEventListener("DOMContentLoaded", function () {
         while (--i >= 0) detectSort(t[i]);
     }
 
-    //ajax
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-
-            document.getElementById("table").appendChild(buildTheTable(myArr)); //create table
+    //jQury ajax
+    $.getJSON('http://cn.sbtech.com/sb-test/content.json')
+        .done(function (obj, status, xhdr) { 
+            var myArr = xhdr.responseJSON;
+            // var myArr = JSON.parse(xhdr.responseText); second variant with vanilla
+            $("#table").append(buildTheTable(myArr)); //create table
             sortTable(); // invoke sorting
             // resize();// invoke resize of height
-        }
-    };
-    xmlhttp.open("GET", "http://cn.sbtech.com/sb-test/content.json", true);
-    xmlhttp.send(null);
+        });
+
+    //Vanilla variant ajax
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = function () {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         var myArr = JSON.parse(this.responseText);
+
+    //         document.getElementById("table").appendChild(buildTheTable(myArr)); //create table
+    //         sortTable(); // invoke sorting
+    //         // resize();// invoke resize of height
+    //     }
+    // };
+    // xmlhttp.open("GET", "http://cn.sbtech.com/sb-test/content.json", true);
+    // xmlhttp.send(null);
 
     Activation('.fancy-ul li');
     Activation('.langs-menu li');
